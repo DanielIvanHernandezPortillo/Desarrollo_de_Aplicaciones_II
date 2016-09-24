@@ -1,0 +1,17 @@
+CREATE TABLE public.estado
+(
+    id_estado integer NOT NULL DEFAULT nextval('estado_id_estado_seq'::regclass),
+    descripcion character varying(50) COLLATE "default".pg_catalog,
+    "numeroHabitantes" integer,
+    "platilloTipico" character varying(50) COLLATE "default".pg_catalog,
+    "trajeTipico" character varying(50) COLLATE "default".pg_catalog,
+    "densidadPoblacion" numeric,
+    CONSTRAINT estado_pk PRIMARY KEY (id_estado)
+)
+WITH (
+    OIDS = FALSE
+)
+TABLESPACE pg_default;
+
+ALTER TABLE public.estado
+    OWNER to postgres;
